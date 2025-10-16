@@ -1,4 +1,4 @@
-# Developer Bootcamp 2025
+# Developer Bootcamp 2025: mohini chahal
 This is the start of your 2025 bootcamp project!
 
 This repo will serve as a place to "turn in" your work. More info about bootcamp can be found on the [Developer Bootcamp 2025 Notion Page](https://www.notion.so/h4i/2025-Developer-Bootcamp-246197abf07b80d09944c01a3c4c9cd4?source=copy_link).
