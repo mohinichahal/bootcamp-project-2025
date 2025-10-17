@@ -13,7 +13,7 @@ const blogs: Blog[] = [
     description: "I took a trip to Rome, Florence, and Venice, Italy!", 
     image: "italy.png", 
     imageAlt: "italy-pic", 
-    slug: ""
+    slug: "italy"
     }, 
 
     {title: "CANCUN",
@@ -21,14 +21,14 @@ const blogs: Blog[] = [
     description: "My cousins and I went to Cancun!", 
     image: "cancun.png", 
     imageAlt: "cancun-pic", 
-    slug: ""}, 
+    slug: "cancun"}, 
 
     {title: "NEW YORK",
     date: "June 2024", 
     description: "Family trip to New York!", 
-    image: "ny.png.png", 
+    image: "ny-png.png", 
     imageAlt: "ny-pic", 
-    slug: ""}, 
+    slug: "ny"}, 
 
 ]
 
@@ -53,7 +53,7 @@ if (!blogContainer)
 
   const link = document.createElement("a");
   link.href = `blogs/${blog.slug}.html`; 
-  link.textContent = "Read More";
+  link.textContent = "read more";
 
   blogDiv.appendChild(title);
   blogDiv.appendChild(image);

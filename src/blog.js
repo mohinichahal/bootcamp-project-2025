@@ -4,20 +4,20 @@ var blogs = [
         description: "I took a trip to Rome, Florence, and Venice, Italy!",
         image: "italy.png",
         imageAlt: "italy-pic",
-        slug: ""
+        slug: "italy"
     },
     { title: "CANCUN",
         date: "December 2023",
         description: "My cousins and I went to Cancun!",
         image: "cancun.png",
         imageAlt: "cancun-pic",
-        slug: "" },
+        slug: "cancun" },
     { title: "NEW YORK",
         date: "June 2024",
         description: "Family trip to New York!",
-        image: "ny.png",
+        image: "ny-png.png",
         imageAlt: "ny-pic",
-        slug: "" },
+        slug: "ny" },
 ];
 var blogContainer = document.getElementById("blog-container");
 blogs.forEach(function (blog) {
@@ -34,7 +34,7 @@ blogs.forEach(function (blog) {
     desc.textContent = blog.description;
     var link = document.createElement("a");
     link.href = "blogs/".concat(blog.slug, ".html");
-    link.textContent = "Read More";
+    link.textContent = "read more";
     blogDiv.appendChild(title);
     blogDiv.appendChild(image);
     blogDiv.appendChild(desc);
