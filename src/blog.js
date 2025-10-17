@@ -1,17 +1,23 @@
 var blogs = [
-    { title: "Trip to Italy!",
+    { title: "ITALY",
         date: "Dec 2022",
         description: "I took a trip to Rome, Florence, and Venice, Italy!",
         image: "italy.png",
-        imageAlt: "",
+        imageAlt: "italy-pic",
         slug: ""
     },
-    { title: "Cancun",
+    { title: "CANCUN",
         date: "December 2023",
         description: "My cousins and I went to Cancun!",
         image: "cancun.png",
-        imageAlt: "",
-        slug: "" }
+        imageAlt: "cancun-pic",
+        slug: "" },
+    { title: "NEW YORK",
+        date: "June 2024",
+        description: "Family trip to New York!",
+        image: "ny.png",
+        imageAlt: "ny-pic",
+        slug: "" },
 ];
 var blogContainer = document.getElementById("blog-container");
 blogs.forEach(function (blog) {
