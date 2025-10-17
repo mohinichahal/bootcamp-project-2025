@@ -1,3 +1,4 @@
+//define the Blog type
 type Blog = {
     title: string; 
     date: string; 
@@ -7,6 +8,7 @@ type Blog = {
     slug: string
 }
 
+//create a list of 3 blogs
 const blogs: Blog[] = [
     {title: "ITALY", 
     date: "Dec 2022", 
@@ -32,8 +34,11 @@ const blogs: Blog[] = [
 
 ]
 
+// get the Container Element for blogs
+
 const blogContainer = document.getElementById("blog-container");
 
+// create + append Blog Elements while iterating over the list of blogs 
 blogs.forEach(blog => {
 if (!blogContainer)
         return
@@ -55,6 +60,7 @@ if (!blogContainer)
   link.href = `blogs/${blog.slug}.html`; 
   link.textContent = "read more";
 
+  // Append all elements to the blog div
   blogDiv.appendChild(title);
   blogDiv.appendChild(image);
   blogDiv.appendChild(desc);

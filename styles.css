@@ -268,7 +268,7 @@ form {
   height: 2.5rem;
 }
 
-/* CSS for blogs */
+/* CSS for blog.html */
 
 #blog-container {
   display: flex;
@@ -315,7 +315,7 @@ form {
   font-weight: bold;
 }
 
-/* blog html pages */
+/* CSS for blogs/html pages */
 
 .blog-page {
     max-width: 1000px;            
