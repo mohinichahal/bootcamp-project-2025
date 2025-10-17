@@ -94,58 +94,30 @@ main {
   font-size: 40px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-
-/* CSS for portfolio grid */
-
+/* Portfolio */
 .project {
-  padding: 10px;
   display: flex;
-  flex-direction: row;
-  max-width: 54%;   
-  margin: 2em auto; 
- 
-
-  /* Debug border */
-  /* border: 2px solid blue; */
-}
-
-.item-link {
-  width: 70%;
-
-  /* Debug border */
-  /* border: 2px solid red; */
+  gap: 20px;
+  max-width: 900px;
+  margin: 2em auto;
+  padding: 10px;
+  align-items: flex-start; 
+  flex-wrap: wrap; 
 }
 
 .project-image {
-padding: 20px;
-  object-fit: cover;
   width: 40%;
-  height: 10px;
-  flex-basis: 10px;
-  flex-grow: 2;
-
-  /* Debug border */
-  /* border: 2px solid black; */
+  height: auto;
+  object-fit: cover;
 }
-
 
 .project-details {
   display: flex;
-  background-color: var(--cg-white);
-  width: 30%;
-  height: 500px;
-  flex-shrink: 1;
-  padding: 0 20px;
-  margin: 0px;
-  line-height: 1.5;
-  overflow: scroll;
-
   flex-direction: column;
-  text-align: center;
   justify-content: center;
-
-  /* Debug border */
-  /* border: 2px solid green; */
+  padding: 20px;
+  background-color: var(--cg-white);
+  line-height: 1.5;
 }
 
 .project-details a {
@@ -153,6 +125,8 @@ padding: 20px;
   text-decoration: none;
   font-weight: bold;
   letter-spacing: 1px;
+  transition: 0.2s;
+  margin-top: 10px;
 }
 
 .project-details a:hover {
@@ -160,14 +134,13 @@ padding: 20px;
   text-decoration: underline;
 }
 
-.project-details {
-  font-weight: lighter;
-}
-
 .project-name {
   font-weight: bold;
   font-size: 20px;
+  margin-bottom: 10px;
 }
+
+
 /* CSS for home page */
 
 .about {
@@ -341,4 +314,66 @@ form {
   text-decoration: none;
   font-weight: bold;
 }
+
+/* blog html pages */
+
+.blog-page {
+    max-width: 1000px;            
+    margin: 40px auto;           
+    padding: 0 20px;
+    background-color: var(--cg-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.blog-page h1 {
+    font-size: 36px;
+    color: var(--cg-blue);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.blog-page em {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.blog-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.blog-images img {
+    width: 32%;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+.blog-page p {
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.blog-page a.back-link {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--cg-black);
+    color: var(--cg-white);
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.blog-page a.back-link:hover {
+    background-color: var(--cg-blue);
+    color: var(--cg-white);
+}
+
 

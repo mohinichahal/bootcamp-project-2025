@@ -10,7 +10,7 @@ type Blog = {
 const blogs: Blog[] = [
     {title: "ITALY", 
     date: "Dec 2022", 
-    description: "I took a trip to Rome, Florence, and Venice, Italy!", 
+    description: "Rome, Florence, and Venice, Italy!", 
     image: "italy.png", 
     imageAlt: "italy-pic", 
     slug: "italy"
@@ -18,7 +18,7 @@ const blogs: Blog[] = [
 
     {title: "CANCUN",
     date: "December 2023", 
-    description: "My cousins and I went to Cancun!", 
+    description: "Cousins trip to Cancun!", 
     image: "cancun.png", 
     imageAlt: "cancun-pic", 
     slug: "cancun"}, 
