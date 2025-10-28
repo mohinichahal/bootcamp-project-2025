@@ -32,7 +32,11 @@ export default function RootLayout({
 		// returns boilerplate
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        
+        
+        {children}
+      </body>
     </html>
   );
 }
