@@ -14,12 +14,12 @@ export default function Navbar() {
         <a href="index.html">Mohini's Website</a>
       </h1>
       <ul className={style["nav-list"]}>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+          <li><Link href="/">Home</Link></li>
+          <li><Link href="/blogs">Blog</Link></li>
+          <li><Link href="/portfolio">Portfolio</Link></li>
+          <li><Link href="/resume">Resume</Link></li>
+          <li><Link href="/contact">Contact</Link></li>
+        </ul>
     </nav>
     </header>
   );
