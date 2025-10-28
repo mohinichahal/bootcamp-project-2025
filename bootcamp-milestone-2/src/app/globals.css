@@ -1,4 +1,4 @@
-@import "tailwindcss";
+/*@import "tailwindcss";
 
 :root {
   --background: #ffffff;
@@ -17,10 +17,390 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+}*/
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+:root {
+  /* variables */
+  --cg-black: rgb(195, 155, 181);
+  --cg-blue: rgb(67, 6, 40);
+  --cg-grey: rgb(243, 243, 243);
+  --cg-white: rgb(255, 255, 255);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: var(--cg-grey);
+  position: relative;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* CSS for navigation */
+
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 7%;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  background-color: var(--cg-black);
+  color: var(--cg-white);
+  padding: 0px 0px;
+
+  /* Debug border */
+  /* border: solid red; */
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  right: 30px;
+  list-style: none;
+
+  /* Debug border */
+  /* border: solid blue; */
+}
+
+.navbar a {
+  color: var(--cg-white);
+  font-weight: bold;
+  margin: 0 12px;
+  text-decoration: none;
+  letter-spacing: 2px;
+
+  font-family: copperplate;
+}
+
+.navbar a:hover {
+  color: var(--cg-blue);
+  text-decoration: underline;
+}
+
+.navbar a:active {
+  color: var(--cg-blue);
+}
+
+.logo a {
+  font-family: sans-serif;
+}
+
+.logo a:hover {
+  text-decoration: none;
+}
+
+main {
+  padding: 0 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-title {
+  display: flex;
+  justify-content: center; 
+  font-size: 40px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/* Portfolio */
+.project {
+  display: flex;
+  gap: 20px;
+  max-width: 900px;
+  margin: 2em auto;
+  padding: 10px;
+  align-items: flex-start; 
+  flex-wrap: wrap; 
+}
+
+.project-image {
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--cg-white);
+  line-height: 1.5;
+}
+
+.project-details a {
+  color: var(--cg-black);
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.2s;
+  margin-top: 10px;
+}
+
+.project-details a:hover {
+  color: var(--cg-blue);
+  text-decoration: underline;
+}
+
+.project-name {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+
+/* CSS for home page */
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f0e9ee;
+  border: 2px dotted #dd5c98;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+h1 {
+    font-size: 30;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:rgb(67, 6, 40);
+}
+/*
+h2 {
+    font-size: 20;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:rgb(63, 59, 61)
+}
+*/
+
+.about-image img {
+  max-width: 300px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+.about-text {
+  flex: 1;
+  margin-left: 20px;
+  font-size: 20px;
+}
+.about-text h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.about-text h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+/* CSS for resume page */
+
+.button {
+  background-color: var(--cg-black);
+  border: none;
+  color: var(--cg-white);
+
+  font-family: monospace;
+
+  padding: 5px 7px;
+  text-align: center;
+
+  border-radius: 2px;
+}
+
+.button:hover {
+  background-color: var(--cg-blue);
+}
+
+.resume h2 {
+    border: dashed;
+    border-width: 1px;
+    border-color: rgb(210, 158, 212);
+  padding: 4px;
+  color:rgb(224, 158, 194)
+}
+
+.resume p{
+    padding: 6px;
+
+
+}
+
+/* CSS for contact form */
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: Georgia;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #f0e9ee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: none;
+}
+
+/* Add some spacing to the form */
+form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+/* CSS for footer */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cg-black);
+  color: var(--cg-white);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+/* CSS for blog.html */
+
+#blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.blog-post {
+  background-color: var(--cg-white);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+}
+
+.blog-post img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.blog-post h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--cg-blue);
+}
+
+.blog-post p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.blog-post a {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: var(--cg-blue);
+  color: var(--cg-white);
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* CSS for blogs/html pages */
+
+.blog-page {
+    max-width: 1000px;            
+    margin: 40px auto;           
+    padding: 0 20px;
+    background-color: var(--cg-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.blog-page h1 {
+    font-size: 36px;
+    color: var(--cg-blue);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.blog-page em {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.blog-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.blog-images img {
+    width: 32%;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+.blog-page p {
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.blog-page a.back-link {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--cg-black);
+    color: var(--cg-white);
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.blog-page a.back-link:hover {
+    background-color: var(--cg-blue);
+    color: var(--cg-white);
+}
+
+

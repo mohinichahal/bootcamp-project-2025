@@ -1,11 +1,9 @@
 import React from "react";
-import Navbar from "../components/navbar"; // adjust path if needed
-//import "../globals.css";
+import "./globals.css";
 
 export default function HomePage() {
   return (
     <main>
-      <Navbar />
 
       <h1>welcome to my website!</h1>
       <h2>it's nice to meet you</h2>

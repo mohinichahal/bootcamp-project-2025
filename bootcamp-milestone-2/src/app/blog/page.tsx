@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../../components/navbar"; // assuming you created the Navbar component
-import style from "./Home.module.css"; // optional, for component-scoped CSS
+import Navbar from "../../components/navbar"; 
+import style from "./Home.module.css"; 
 
 export default function Home() {
   return (
