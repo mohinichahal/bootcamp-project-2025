@@ -121,6 +121,7 @@ main {
   font-size: 40px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
 /* Portfolio */
 .project {
   display: flex;
@@ -167,7 +168,6 @@ main {
   margin-bottom: 10px;
 }
 
-
 /* CSS for home page */
 
 .about {
@@ -182,17 +182,10 @@ main {
 }
 
 h1 {
-    font-size: 30;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color:rgb(67, 6, 40);
+  font-size: 30;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color:rgb(67, 6, 40);
 }
-/*
-h2 {
-    font-size: 20;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color:rgb(63, 59, 61)
-}
-*/
 
 .about-image img {
   max-width: 300px;
@@ -205,6 +198,7 @@ h2 {
   margin-left: 20px;
   font-size: 20px;
 }
+
 .about-text h1 {
   font-size: 40px;
   margin-bottom: 10px;
@@ -220,37 +214,68 @@ h2 {
   line-height: 1.5;
 }
 
-/* CSS for resume page */
+/* CSS for Resume Page (Aligned) */
 
-.button {
-  background-color: var(--cg-black);
-  border: none;
-  color: var(--cg-white);
-
-  font-family: monospace;
-
-  padding: 5px 7px;
-  text-align: center;
-
-  border-radius: 2px;
+.resume {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 2rem;
+  background-color: var(--cg-white);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  color: #222;
+  line-height: 1.6;
 }
 
-.button:hover {
-  background-color: var(--cg-blue);
+.resume section {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
 }
 
 .resume h2 {
-    border: dashed;
-    border-width: 1px;
-    border-color: rgb(210, 158, 212);
-  padding: 4px;
-  color:rgb(224, 158, 194)
+  font-size: 1.5rem;
+  border: dashed 1px rgb(210, 158, 212);
+  color: rgb(224, 158, 194);
+  padding: 6px;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  text-align: left;
+}
+main.resume {
+  align-items: stretch;
+  text-align: left;
+}
+.resume p {
+  margin: 0.3rem 0;
+  padding: 4px 0;
 }
 
-.resume p{
-    padding: 6px;
+.resume strong {
+  color: #000;
+}
 
+.resume em {
+  color: #444;
+  font-style: italic;
+}
 
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: var(--cg-black);
+  color: var(--cg-white);
+  font-size: 0.9rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive adjustment */
+@media (max-width: 700px) {
+  .resume {
+    padding: 1.5rem;
+  }
 }
 
 /* CSS for contact form */
@@ -275,24 +300,9 @@ textarea {
   resize: none;
 }
 
-/* Add some spacing to the form */
 form {
   width: 500px;
   margin: 0 auto;
-}
-
-/* CSS for footer */
-
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--cg-black);
-  color: var(--cg-white);
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
 }
 
 /* CSS for blog.html */
@@ -345,62 +355,60 @@ form {
 /* CSS for blogs/html pages */
 
 .blog-page {
-    max-width: 1000px;            
-    margin: 40px auto;           
-    padding: 0 20px;
-    background-color: var(--cg-white);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 1000px;            
+  margin: 40px auto;           
+  padding: 0 20px;
+  background-color: var(--cg-white);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .blog-page h1 {
-    font-size: 36px;
-    color: var(--cg-blue);
-    text-align: center;
-    margin-bottom: 10px;
+  font-size: 36px;
+  color: var(--cg-blue);
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .blog-page em {
-    display: block;
-    text-align: center;
-    font-size: 18px;
-    color: gray;
-    margin-bottom: 20px;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: gray;
+  margin-bottom: 20px;
 }
 
 .blog-images {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .blog-images img {
-    width: 32%;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    object-fit: cover;
+  width: 32%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  object-fit: cover;
 }
 
 .blog-page p {
-    font-size: 19px;
-    line-height: 1.6;
-    margin-bottom: 20px;
+  font-size: 19px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .blog-page a.back-link {
-    display: inline-block;
-    text-decoration: none;
-    background-color: var(--cg-black);
-    color: var(--cg-white);
-    padding: 8px 12px;
-    border-radius: 4px;
-    margin-bottom: 20px;
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--cg-black);
+  color: var(--cg-white);
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
 }
 
 .blog-page a.back-link:hover {
-    background-color: var(--cg-blue);
-    color: var(--cg-white);
+  background-color: var(--cg-blue);
+  color: var(--cg-white);
 }
-
-

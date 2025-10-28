@@ -9,6 +9,10 @@
   margin-bottom: 20px; /* spacing between blog previews */
 }
 
+.blogLink {
+  text-decoration: none; /* removes underline */
+  color: inherit;        /* keeps text color the same */
+}
 /* Blog title */
 .blogPreview h3 {
   font-size: 20px;

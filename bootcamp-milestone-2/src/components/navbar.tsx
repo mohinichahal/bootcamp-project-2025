@@ -15,7 +15,7 @@ export default function Navbar() {
       </h1>
       <ul className={style["nav-list"]}>
           <li><Link href="/">Home</Link></li>
-          <li><Link href="/blogs">Blog</Link></li>
+          <li><Link href="/blog">Blog</Link></li>
           <li><Link href="/portfolio">Portfolio</Link></li>
           <li><Link href="/resume">Resume</Link></li>
           <li><Link href="/contact">Contact</Link></li>

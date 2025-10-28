@@ -1,12 +1,11 @@
 import React from "react";
 import BlogPreview from '../../components/blogPreview';
-import style from "./Home.module.css"; 
 import blogs from '../blogData'; // only import the data
 
 export default function Home() {
   return (
     <>
-      <main className={style.main}>
+      <main>
         <h3>
           I love travelling! Here's a travel blog <em>(in-progress)</em>:
         </h3>
@@ -25,7 +24,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className={style.footer}>
+      <footer>
         © 2025 mohini's website | All Rights Reserved
       </footer>
     </>

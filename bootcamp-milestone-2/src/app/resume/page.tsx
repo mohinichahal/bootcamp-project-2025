@@ -3,25 +3,23 @@ import React from "react";
 export default function Resume() {
   return (
     <>
-      <main className="resume" style={{ padding: "20px", maxWidth: "900px", margin: "0 auto" }}>
+
+      <main className="resume">
         {/* Education Section */}
         <section>
           <h2>Education</h2>
           <p>California Polytechnic State University, San Luis Obispo — B.S. Computer Science</p>
           <p>American High School | Graduated 2025, Fremont, CA</p>
-            <p>Grade: 4.0</p>
-            <p>
-            Coursework: AP Computer Science Principles, AP Computer Science A, AP Calculus, AP Physics 1 & C
-            </p>
-            <p>Programming Languages: HTML, Java, Python</p>
+          <p>Grade: 4.0</p>
+          <p>Coursework: AP Computer Science Principles, AP Computer Science A, AP Calculus, AP Physics 1 & C</p>
+          <p>Programming Languages: HTML, Java, Python</p>
         </section>
 
         {/* Experience Section */}
         <section>
           <h2>Experience</h2>
           <p>
-            <strong>Published Research Paper: “Artificial Intelligence and Cancer”</strong> — Author,
-            Curieux Academic Journal, February 2024
+            <strong>Published Research Paper: “Artificial Intelligence and Cancer”</strong> — Author, Curieux Academic Journal, February 2024
             <br />
             Explored AI applications in oncology, personalized treatment plans, and ethical considerations.
           </p>
@@ -55,36 +53,12 @@ export default function Resume() {
         {/* Community Involvement Section */}
         <section>
           <h2>Community Involvement</h2>
-          <p>
-            <strong>GENUp</strong> — AHS Student Ambassador & CMO, Aug 2023–Present
-            <br />
-            Led a team of 8 students and 250+ district-wide voter drives, registering 3,500 students.
-          </p>
-          <p>
-            <strong>Find My Mentor</strong> — Co-Founder, Jan 2024–Present
-            <br />
-            Interactive website connecting students with mentors across 3 high schools.
-          </p>
-          <p>
-            <strong>Madhu Bhasha Kendra</strong> — Teaching Assistant, Oct 2023–Apr 2024
-            <br />
-            Supported Hindi instruction for 30+ students.
-          </p>
-          <p>
-            <strong>Indian Student Association Club</strong> — President (2024–25), Treasurer (2023–24)
-            <br />
-            Planned fundraisers, Garba Night, led weekly meetings.
-          </p>
-          <p>
-            <strong>Heroes of Tomorrow</strong> — Fundraising Commissioner, Aug 2023–Jan 2024
-            <br />
-            Raised $200+ for underprivileged girls’ book project.
-          </p>
-          <p>
-            <strong>Link Crew</strong> — Member, Aug 2024
-            <br />
-            Led freshmen groups through orientation and MAZE day.
-          </p>
+          <p><strong>GENUp</strong> — AHS Student Ambassador & CMO, Aug 2023–Present: Led a team of 8 students and 250+ district-wide voter drives, registering 3,500 students.</p>
+          <p><strong>Find My Mentor</strong> — Co-Founder, Jan 2024–Present: Interactive website connecting students with mentors across 3 high schools.</p>
+          <p><strong>Madhu Bhasha Kendra</strong> — Teaching Assistant, Oct 2023–Apr 2024: Supported Hindi instruction for 30+ students.</p>
+          <p><strong>Indian Student Association Club</strong> — President (2024–25), Treasurer (2023–24): Planned fundraisers, Garba Night, led weekly meetings.</p>
+          <p><strong>Heroes of Tomorrow</strong> — Fundraising Commissioner, Aug 2023–Jan 2024: Raised $200+ for underprivileged girls’ book project.</p>
+          <p><strong>Link Crew</strong> — Member, Aug 2024: Led freshmen groups through orientation and MAZE day.</p>
         </section>
 
         {/* Skills Section */}
