@@ -1,18 +1,28 @@
 import React from "react";
-import Navbar from "../../components/navbar"; 
+import BlogPreview from '../../components/blogPreview';
 import style from "./Home.module.css"; 
+import blogs from '../blogData'; // only import the data
 
 export default function Home() {
   return (
     <>
-      <Navbar />
-
       <main className={style.main}>
         <h3>
           I love travelling! Here's a travel blog <em>(in-progress)</em>:
         </h3>
 
-        <div id="blog-container"></div>
+        <div id="blog-container">
+          {blogs.map((blog) => (
+            <BlogPreview 
+                slug = {blog.slug}
+                title={blog.title}
+                description={blog.description}
+                image={blog.image}
+                imageAlt={blog.imageAlt}
+                date={blog.date}
+            />
+          ))}
+        </div>
       </main>
 
       <footer className={style.footer}>

@@ -1,4 +1,4 @@
-// src/data/blogData.ts
+//src/data/blogData.ts
 
 // Define the Blog interface
 export interface Blog {
@@ -38,5 +38,4 @@ const blogs: Blog[] = [
   },
 ];
 
-// Export the array so it can be imported elsewhere
 export default blogs;
