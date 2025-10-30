@@ -1,6 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Footer from "../../../../components/footer/footer";
+import styles from "../blogPage.module.css";
+
+
 
 export default function CancunBlog() {
   return (

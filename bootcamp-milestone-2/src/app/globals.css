@@ -259,17 +259,7 @@ main.resume {
   color: #444;
   font-style: italic;
 }
-
-.footer {
-  text-align: center;
-  padding: 1rem 0;
-  background-color: var(--cg-black);
-  color: var(--cg-white);
-  font-size: 0.9rem;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
+ 
 
 /* Responsive adjustment */
 @media (max-width: 700px) {
@@ -353,6 +343,7 @@ form {
 }
 
 /* CSS for blogs/html pages */
+
 
 .blog-page {
   max-width: 1000px;            

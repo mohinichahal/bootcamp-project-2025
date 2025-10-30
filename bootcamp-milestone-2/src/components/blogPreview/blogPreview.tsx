@@ -3,7 +3,6 @@ import style from './blogPreview.module.css'
 import Image from 'next/image';
 import { Blog } from '../../app/blog/blogData';
 import Link from "next/link";
-import CancunBlog from '../../app/blog/blogs/cancun/page';
 
 export default function BlogPreview(props: Blog) {
   return (
