@@ -1,6 +1,6 @@
 import React from "react";
-import BlogPreview from '../../components/blogPreview';
-import blogs from '../blogData'; // only import the data
+import BlogPreview from '../../components/blogPreview/blogPreview';
+import blogs from "./blogData";
 
 export default function Home() {
   return (
@@ -13,12 +13,14 @@ export default function Home() {
         <div id="blog-container">
           {blogs.map((blog) => (
             <BlogPreview 
+                key={blog.slug}
                 slug = {blog.slug}
                 title={blog.title}
                 description={blog.description}
                 image={blog.image}
                 imageAlt={blog.imageAlt}
                 date={blog.date}
+                href = {blog.href}
             />
           ))}
         </div>

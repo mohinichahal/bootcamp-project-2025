@@ -1,4 +1,6 @@
 import React from "react";
+import blogs from './blog/blogData'; // adjust path depending on file location
+
 
 export default function HomePage() {
   return (

@@ -8,6 +8,7 @@ export interface Blog {
   image: string;   
   imageAlt: string;
   slug: string;
+  href: string
 }
 
 // Create the blog array
@@ -16,9 +17,10 @@ const blogs: Blog[] = [
     title: "ITALY",
     date: "Dec 2022",
     description: "Rome, Florence, and Venice, Italy!",
-    image: "/italy.png",      
+    image: "/italy.png",
     imageAlt: "italy-pic",
     slug: "italy",
+    href: "/blog/blogs/italy",
   },
   {
     title: "CANCUN",
@@ -27,6 +29,7 @@ const blogs: Blog[] = [
     image: "/cancun.png",
     imageAlt: "cancun-pic",
     slug: "cancun",
+    href: "/blog/blogs/cancun",
   },
   {
     title: "NEW YORK",
@@ -35,7 +38,7 @@ const blogs: Blog[] = [
     image: "/ny.png",
     imageAlt: "ny-pic",
     slug: "ny",
+    href: "/blog/blogs/ny",
   },
 ];
-
 export default blogs;

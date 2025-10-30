@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../components/footer/footer";
 
 export default function Resume() {
   return (
@@ -79,10 +80,8 @@ export default function Resume() {
           <p><em>AP Scholar with Distinction</em> — Average score ≥ 3.5 on all AP exams, with 3+ on five or more exams.</p>
         </section>
       </main>
-
-      <footer className="footer">
-        © 2025 mohini's website | All Rights Reserved
-      </footer>
+    
+      < Footer />
     </>
   );
 }

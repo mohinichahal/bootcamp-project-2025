@@ -1,12 +1,13 @@
 import React from 'react';
 import style from './blogPreview.module.css'
 import Image from 'next/image';
-import { Blog } from '../app/blogData';
+import { Blog } from '../../app/blog/blogData';
 import Link from "next/link";
+import CancunBlog from '../../app/blog/blogs/cancun/page';
 
 export default function BlogPreview(props: Blog) {
   return (
-    <Link href={props.title} className={style.blogLink}>
+     <Link href={props.href} className={style.blogLink}>
       <div className={style.blogPreview}>
         <h3>{props.title}</h3>
         <div>
