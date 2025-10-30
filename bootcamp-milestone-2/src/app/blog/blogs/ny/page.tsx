@@ -1,6 +1,8 @@
 // src/app/blog/new-york/page.tsx
 import React from "react";
 import Image from "next/image";
+import Footer from "../../../../components/footer/footer";
+
 
 export default function NewYorkBlog() {
   return (
@@ -23,9 +25,7 @@ export default function NewYorkBlog() {
         <a className="back-link" href="/blog">Back to Blog</a>
       </main>
 
-      <footer className="footer">
-        © 2025 mohini's website | All Rights Reserved
-      </footer>
+      < Footer />
     </>
   );
 }

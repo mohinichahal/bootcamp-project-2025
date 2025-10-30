@@ -1,5 +1,6 @@
 import React from "react";
 import blogs from './blog/blogData'; // adjust path depending on file location
+import Footer from "../components/footer/footer";
 
 
 export default function HomePage() {
@@ -25,9 +26,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <footer className="footer">
-        © 2025 mohini's website | All Rights Reserved
-      </footer>
+      < Footer />
     </main>
   );
 }

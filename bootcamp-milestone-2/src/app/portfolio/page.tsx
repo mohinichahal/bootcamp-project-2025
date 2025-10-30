@@ -1,5 +1,7 @@
 // src/app/portfolio/page.tsx
 import React from "react";
+import Footer from "../../components/footer/footer";
+
 
 export default function Portfolio() {
   return (
@@ -23,9 +25,7 @@ export default function Portfolio() {
         </div>
       </main>
 
-      <footer className="footer">
-        © 2025 mohini's website | All Rights Reserved
-      </footer>
+      < Footer />
     </>
   );
 }

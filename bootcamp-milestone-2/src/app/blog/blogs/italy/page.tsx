@@ -1,6 +1,8 @@
 // src/app/blog/italy/page.tsx
 import React from "react";
 import Image from "next/image";
+import Footer from "../../../../components/footer/footer";
+
 
 export default function ItalyBlog() {
   return (
@@ -25,9 +27,7 @@ export default function ItalyBlog() {
         <a className="back-link" href="/blog">Back to Blog</a>
       </main>
 
-      <footer className="footer">
-        © 2025 mohini's website | All Rights Reserved
-      </footer>
+      < Footer />
     </>
   );
 }

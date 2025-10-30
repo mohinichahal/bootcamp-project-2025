@@ -1,5 +1,7 @@
 import React from "react";
 import "../globals.css"; 
+import Footer from "../../components/footer/footer";
+
 export default function Contact() {
   return (
     <>
@@ -29,9 +31,7 @@ export default function Contact() {
         </form>
       </main>
 
-      <footer className="footer">
-        © 2025 mohini's website | All Rights Reserved
-      </footer>
+      < Footer />
     </>
   );
 }

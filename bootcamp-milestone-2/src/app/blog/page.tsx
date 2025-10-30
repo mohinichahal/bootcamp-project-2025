@@ -1,6 +1,7 @@
 import React from "react";
 import BlogPreview from '../../components/blogPreview/blogPreview';
 import blogs from "./blogData";
+import Footer from "../../components/footer/footer";
 
 export default function Home() {
   return (
@@ -26,9 +27,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer>
-        © 2025 mohini's website | All Rights Reserved
-      </footer>
+      < Footer />
     </>
   );
 }
