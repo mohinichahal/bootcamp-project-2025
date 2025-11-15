@@ -1,4 +1,4 @@
-//src/data/blogData.ts
+
 
 // Define the Blog interface
 export interface Blog {
