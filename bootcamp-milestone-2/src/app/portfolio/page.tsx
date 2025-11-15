@@ -4,7 +4,16 @@ import Footer from "../../components/footer/footer";
 import connectDB from "../../database/db";
 import Project from "../../database/projectSchema";
 
+async function getProjects() {
+  await connectDB();
 
+  try {
+    const projects = await Project.find().sort({ title: 1 }).orFail();
+    return projects;
+  } catch {
+    return null;
+  }
+}
 
 export default function Portfolio() {
   return (
