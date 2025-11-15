@@ -1,6 +1,9 @@
 // src/app/portfolio/page.tsx
 import React from "react";
 import Footer from "../../components/footer/footer";
+import connectDB from "../../database/db";
+import Project from "../../database/projectSchema";
+
 
 
 export default function Portfolio() {
