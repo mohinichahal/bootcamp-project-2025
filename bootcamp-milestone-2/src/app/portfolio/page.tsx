@@ -15,29 +15,34 @@ async function getProjects() {
   }
 }
 
-export default function Portfolio() {
+export default async function Portfolio() {
+  const projects = await getProjects();
+
+  if (!projects || projects.length === 0) {
+    return <p>No projects found.</p>;
+  }
+
   return (
     <>
-
       <main>
         <h1 className="page-title">Portfolio:</h1>
 
-        <div className="project">
-          <a href="index.html">
-            <img src="/website.png" alt="view website" className="project-image" />
-          </a>
+        {projects.map((project) => (
+          <div key={project.title} className="project">
+            <a href={project.link}>
+              <img src={project.image} alt={project.image_alt} className="project-image" />
+            </a>
 
-          <div className="project-details">
-            <h2 className="project-name">Personal Website</h2>
-            <p className="project-description">
-              Used HTML and CSS to code a personal website. Shoutout @Hack4ImpactCalPoly Starter Pack!
-            </p>
-            <a href="index.html">LEARN MORE!</a>
+            <div className="project-details">
+              <h2 className="project-name">{project.title}</h2>
+              <p className="project-description">{project.description}</p>
+              <a href={project.link}>LEARN MORE!</a>
+            </div>
           </div>
-        </div>
+        ))}
       </main>
 
-      < Footer />
+      <Footer />
     </>
   );
 }
