@@ -24,6 +24,19 @@ const blogSchema = new Schema<Blog>({
 		content: { type: String, required: true },
 })
 
+
+const CommentSchema = new Schema({
+  user: { type: String, required: true },
+  comment: { type: String, required: true },
+  time: { type: Date, default: Date.now }
+});
+
+const BlogSchema = new Schema({
+  title: String,
+  content: String,
+  comments: [CommentSchema]
+});
+
 // defining the collection and model
 const Blog = mongoose.models['blogs'] ||
     mongoose.model('blogs', blogSchema);
