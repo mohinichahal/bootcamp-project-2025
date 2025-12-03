@@ -9,17 +9,18 @@ type CommentProps = {
 }
 
 function parseCommentTime(time: Date) {
+    
     const dateObj = new Date(time);
     return dateObj.toDateString() + " " + dateObj.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 }
 
 function Comment({ comment }: CommentProps) {
+    const date = parseCommentTime(comment.time); 
     return (
-        <div>
-            <h4>{comment.user}</h4>
-            <p>{comment.comment}</p>
-            <span>{parseCommentTime(comment.time)}</span>
-        </div>
+    <div className="comment">
+      <p className="comment-user">{comment.user} <span className="comment-date">{date}</span></p>
+      <p className="comment-text">{comment.comment}</p>
+    </div>
     );
 }
 

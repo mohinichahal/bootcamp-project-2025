@@ -30,8 +30,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-		// returns boilerplate
-  return (
+   return (
     <html lang="en">
       <body className={inter.className}>
         <Navbar />

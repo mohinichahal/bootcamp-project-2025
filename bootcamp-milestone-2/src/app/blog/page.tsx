@@ -49,7 +49,7 @@ export default async function Home() {
               image={blog.image}
               imageAlt={blog.image_alt} // must match your schema
               date={blog.date.toDateString()} // convert Date to string
-              href={`/blog/blogs/${blog.slug}`} // generate href dynamically
+              href={`/blog/${blog.slug}`}// generate href dynamically
             />
           ))}
         </div>

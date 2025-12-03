@@ -13,7 +13,8 @@ type Blog = {
 	  date: Date;
 	  description: string; // for preview
 	  content: string; // text content for individual blog page
-	  image: string; // url for string in public
+	  image: string; 
+	  images: string[]; // url for string in public
 	  image_alt: string; // alt for image
 	  comments: IComment[]; // array for comments
 };
@@ -32,16 +33,14 @@ const blogSchema = new Schema<Blog>({
 		slug: { type: String, required: true },
 		date: { type: Date, required: false, default: new Date()},
 		description: { type: String, required: true },
-		image: { type: String, required: true },
+		image: { type: String, required: true }, 
+  		images: { type: [String], required: true }, // new field
 	    image_alt: { type: String, required: true },
 		content: { type: String, required: true },
-		comments: [CommentSchema]
+		comments: {type : [CommentSchema], default: []}
 })
 
 
-// defining the collection and model
-const Blog = mongoose.models['blogs'] ||
-    mongoose.model('blogs', blogSchema);
+const Blog = mongoose.models['blogs'] || mongoose.model("blogs", blogSchema);
 
-export default mongoose.models.Blog || mongoose.model("Blog", blogSchema);
-
+export default Blog;
