@@ -2,25 +2,29 @@ import { NextRequest, NextResponse } from 'next/server'
 import connectDB from "../../../../database/db"
 import Blog from "../../../../database/blogSchema"
 
+
 type IParams = {
-  params: Promise<{
+  params: {
     slug: string
-  }>
+  }
 }
 
 // GET - Fetch blog by slug
-export const GET = async (req: NextRequest, context: { params: { slug: string } }) => {
+export async function GET(req: NextRequest, { params }: IParams) {
   await connectDB()
-  const { slug } = await (context as unknown as IParams).params
+  const { slug } = params // no 'await' needed
 
   try {
     let blog = await Blog.findOne({ slug }).exec()
+
     if (!blog) {
       blog = await Blog.findOne({ slug: { $regex: slug, $options: 'i' } }).exec()
     }
+
     if (!blog) {
       return NextResponse.json('Blog not found.', { status: 404 })
     }
+
     return NextResponse.json(blog)
   } catch (err) {
     return NextResponse.json('Blog not found.', { status: 404 })
@@ -28,22 +32,26 @@ export const GET = async (req: NextRequest, context: { params: { slug: string } 
 }
 
 // POST - Create a comment
-export const POST = async (req: NextRequest, context: { params: { slug: string } }) => {
+export async function POST(req: NextRequest, { params }: IParams) {
   await connectDB()
-  const { slug } = await (context as unknown as IParams).params
+  const { slug } = params // no 'await' here either
 
   try {
     const body = await req.json()
     const { user, comment } = body
 
     if (!user || !comment) {
-      return NextResponse.json({ error: 'User and comment are required' }, { status: 400 })
+      return NextResponse.json(
+        { error: 'User and comment are required' },
+        { status: 400 }
+      )
     }
 
     let blog = await Blog.findOne({ slug }).exec()
     if (!blog) {
       blog = await Blog.findOne({ slug: { $regex: slug, $options: 'i' } }).exec()
     }
+
     if (!blog) {
       return NextResponse.json({ error: 'Blog not found' }, { status: 404 })
     }
@@ -58,9 +66,13 @@ export const POST = async (req: NextRequest, context: { params: { slug: string }
     blog.comments.push(newComment)
     await blog.save()
 
-    return NextResponse.json({ message: 'Comment added successfully', comment: newComment }, { status: 201 })
+    return NextResponse.json(
+      { message: 'Comment added successfully', comment: newComment },
+      { status: 201 }
+    )
   } catch (err) {
     console.error('Error adding comment:', err)
     return NextResponse.json({ error: 'Failed to add comment' }, { status: 500 })
   }
 }
+
