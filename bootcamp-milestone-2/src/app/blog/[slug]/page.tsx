@@ -5,10 +5,9 @@ import connectDB from "../../../database/db"
 import Image from "next/image";
 import BlogModel from "../../../database/blogSchema"
 import Blog from "../../../database/blogSchema"
-import TestCommentButton from '../../../components/comments/testComment';
 
 type Props = { 
-    params: { slug: string } | Promise<{slug: string}>;
+    params: Promise<{ slug: string }>
 };
 
 async function getBlog(slug: string) {
