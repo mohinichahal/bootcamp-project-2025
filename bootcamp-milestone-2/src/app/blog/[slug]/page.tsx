@@ -1,8 +1,11 @@
+
 import React from 'react';
 import Comment from '../../../components/comments/Comment';
 import connectDB from "../../../database/db"
 import Image from "next/image";
 import BlogModel from "../../../database/blogSchema"
+import Blog from "../../../database/blogSchema"
+import TestCommentButton from '../../../components/comments/testComment';
 
 type Props = { 
     params: { slug: string } | Promise<{slug: string}>;
@@ -29,6 +32,7 @@ if (!blog) return <p>Blog not found.</p>;
       {/* Blog Title */}
       <h1>{blog.title}</h1>
 
+
       {/* Blog Date */}
       <p><em>{new Date(blog.date).toLocaleDateString()}</em></p>
 
@@ -48,6 +52,7 @@ if (!blog) return <p>Blog not found.</p>;
         <p>{blog.content}</p>
       )}
 
+ 
       {/* Back link */}
       <a href="/blog" className="back-link">Back to Blog</a>
 
