@@ -2,17 +2,16 @@ import { NextRequest, NextResponse } from 'next/server'
 import connectDB from "../../../../database/db"
 import Blog from "../../../../database/blogSchema"
 
-
 type IParams = {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 // GET - Fetch blog by slug
 export async function GET(req: NextRequest, { params }: IParams) {
   await connectDB()
-  const { slug } = params // no 'await' needed
+  const { slug } = await params // ADD await here
 
   try {
     let blog = await Blog.findOne({ slug }).exec()
@@ -34,7 +33,7 @@ export async function GET(req: NextRequest, { params }: IParams) {
 // POST - Create a comment
 export async function POST(req: NextRequest, { params }: IParams) {
   await connectDB()
-  const { slug } = params // no 'await' here either
+  const { slug } = await params // ADD await here too
 
   try {
     const body = await req.json()
@@ -75,4 +74,3 @@ export async function POST(req: NextRequest, { params }: IParams) {
     return NextResponse.json({ error: 'Failed to add comment' }, { status: 500 })
   }
 }
-
