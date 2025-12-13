@@ -41,17 +41,9 @@ if (!blog) return <p>Blog not found.</p>;
     <Image key={index} src={img} alt={`Blog image ${index + 1}`} width={200} height={400} />
   ))}
 </div>
-
-      {/* Blog Content */}
-      {Array.isArray(blog.contentParagraphs) ? (
-        blog.contentParagraphs.map((para: string, idx: number) => (
-          <p key={idx}>{para}</p>
-        ))
-      ) : (
-        <p>{blog.content}</p>
-      )}
-
  
+        <p>{blog.content}</p>
+      
       {/* Back link */}
       <a href="/blog" className="back-link">Back to Blog</a>
 
